@@ -16,6 +16,7 @@ class GamesController < ApplicationController
     else
       @message = "Congratulations! #{@word} is a valid English word!"
     end
+    session[:score] = @word.length
   end
 
   def in_grid?(word, letters)
